@@ -1,0 +1,5 @@
+# Ignoring pycache
+__pycache__
+# Ignoring iterated files
+*~
+*#
