@@ -129,7 +129,7 @@ TestBaseModel class:
 
 ## Examples of use
 ```
-vagrantAirBnB_clone$./console.py
+vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v3$ ./console.py
 (hbnb) help
 
 Documented commands (type help <topic>):
@@ -151,12 +151,12 @@ EOF  all  create  destroy  help  quit  show  update
 ```
 
 ## Bugs
-No known bugs at this time. 
+No known bugs at this time.
 
 ## Authors
-Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
-Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)
+Daniel Baquero - [Github](https://github.com/DanielBaquero28) / [Twitter](https://twitter.com/DanielB30589105)  
+Giovanny Ortegón - [Github](https://github.com/Skillhh) / [Twitter](https://twitter.com/__sklgio__)
 
 Second part of Airbnb: Joann Vuong
 ## License
-Public Domain. No copy write protection. 
+Public Domain. No copy write protection.
