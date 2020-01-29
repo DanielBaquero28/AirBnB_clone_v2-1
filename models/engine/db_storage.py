@@ -72,13 +72,13 @@ class DBStorage:
         self.__session = Session
 
     def close(self):
-        """call remove() method on the private session attribute"""
+        """ call remove() method on the private session attribute """
         self.__session.remove()
 
     def get(self, cls, id):
         """ Get First a kind class """
         if cls is not None and id is not None:
-            obj = "{}.{}".format(cls,id)
+            obj = "{}.{}".format(cls, id)
             if obj in self.all(cls):
                 return self.all(cls)[obj]
         else:
