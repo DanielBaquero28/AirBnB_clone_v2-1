@@ -16,8 +16,11 @@ def stats():
     """
     Creates and endpoint that retrieves the number of each objects by type
     """
-    models = ['User', 'State', 'Review', 'Place', 'City', 'Amenity']
-    stats = {}
-    for item in models:
-        stats['item'] = storage.count(item)
-    return (jsonify(stats))
+    models = {'User': 'users', 'State': 'states',
+              'Review': 'reviews', 'Place': 'places',
+              'City': 'cities', 'Amenity': 'amenities'}
+
+    objs = {}
+    for key, value in models.items():
+        objs[value] = storage.count(key)
+    return jsonify(objs)
