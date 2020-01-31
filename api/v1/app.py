@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 """ Starting my API """
-from flask import Flask
+from flask import Flask, jsonify
 from models import storage
 from api.v1.views import app_views
 from os import getenv
-from flask import make_response
+
 
 app = Flask(__name__)
 app.register_blueprint(app_views)
 
 
 @app.errorhandler(404)
-def handling_error_404():
+def handling_error(error):
     """ Handles error 404 """
-    return (make_response(jsonify({"error": "Not found"}), 404))
+    return jsonify({"error": "Not found"}), 404
 
 
 @app.teardown_appcontext
