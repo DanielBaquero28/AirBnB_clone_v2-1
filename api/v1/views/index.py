@@ -16,8 +16,8 @@ def stats():
     """
     Creates and endpoint that retrieves the number of each objects by type
     """
-    models = {'User':'users', 'State':'states',
-              'Review':'reviews', 'Place':'places',
+    models = {'User': 'users', 'State': 'states',
+              'Review': 'reviews', 'Place': 'places',
               'City': 'cities', 'Amenity': 'amenities'}
 
     objs = {}
