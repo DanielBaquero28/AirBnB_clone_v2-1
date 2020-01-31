@@ -6,13 +6,13 @@ from models import storage
 
 
 @app_views.route('/status')
-def status_appviews():
+def status():
     """ Checks app_view status """
-    return (jsonify({"status": "OK"}))
+    return jsonify({'status':'OK'})
 
 
 @app_views.route('/stats')
-def func_stats():
+def stats():
     """
     Creates and endpoint that retrieves the number of each objects by type
     """
