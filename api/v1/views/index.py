@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 """ Importing moduls¡es required for index """
 from api.v1.views import app_views
-from json import jsonify
+from flask import jsonify
 from models import storage
 
 
-@app.route('/status')
+@app_views.route('/status')
 def status_appviews():
     """ Checks app_view status """
     return (jsonify({"status": "OK"}))
 
 
-@app.route('/stats')
+@app_views.route('/stats')
 def func_stats():
     """
     Creates and endpoint that retrieves the number of each objects by type

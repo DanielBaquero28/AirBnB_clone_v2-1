@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """ Handles all default RestFul API actions """
-from api.v1.views import app_reviews
-from flask import jsonify, requests, abort
+from api.v1.views import app_views
+from flask import jsonify, request, abort
 from models.base_model import BaseModel
-from models.state import States
+from models.state import State
 from models import storage
 
 
@@ -54,6 +54,6 @@ def update_states(state_id):
     states_storage = states_storage.to_json()
     keys = ['id', 'created_at', 'updated_at']
     states_storage.update({key: value for (key, value) in dict_request.items()
-                           if not in keys})
+                           if key not in keys})
     storage.save()
     return (jsonify(states_storage), 200)
